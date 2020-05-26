@@ -3,6 +3,10 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 app1 = Flask(__name__)
 
+@app1.route("/")
+def home():
+    return render_template('index.html')
+
 @app1.route("/about")
 def about():
     return render_template('index.html')
